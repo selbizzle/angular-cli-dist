@@ -28,11 +28,11 @@ describe('<%= classifiedModuleName %>Component', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-	  imports: [],
+      imports: [],
       declarations: [ <%= classifiedModuleName %>Component,  <%= classifiedModuleName %>HostComponentMock],
-	  providers: [
-		{provide: '<Some Injected Service Name>', useClass: <%= classifiedModuleName %>ServiceMock}
-	  ]
+      providers: [
+        {provide: '<Some Injected Service Name>', useClass: <%= classifiedModuleName %>ServiceMock}
+      ]
     })
     .compileComponents();
   }));
@@ -41,7 +41,7 @@ describe('<%= classifiedModuleName %>Component', () => {
     hostFixture = TestBed.createComponent(<%= classifiedModuleName %>HostComponentMock);
     hostComponent = hostFixture.componentInstance;
     hostFixture.detectChanges();
-	
+
     fixture = TestBed.createComponent(<%= classifiedModuleName %>Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
